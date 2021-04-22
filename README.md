@@ -1,3 +1,7 @@
+##FORK
+This fork allows FoxVision to update the lib according to our needs.
+We mainly added the possibility to set title to the document when you call "merge()".
+
 # libmergepdf
 
 [![Packagist Version](https://img.shields.io/packagist/v/iio/libmergepdf.svg?style=flat-square)](https://packagist.org/packages/iio/libmergepdf)
