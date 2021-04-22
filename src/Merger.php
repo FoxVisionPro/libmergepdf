@@ -64,9 +64,9 @@ final class Merger
     /**
      * Merges loaded PDFs
      */
-    public function merge(): string
+    public function merge(string $documentTitle): string
     {
-        return $this->driver->merge(...$this->sources);
+        return $this->driver->merge($documentTitle, ...$this->sources);
     }
 
     /**

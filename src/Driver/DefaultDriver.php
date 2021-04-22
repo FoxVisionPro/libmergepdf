@@ -18,8 +18,8 @@ final class DefaultDriver implements DriverInterface
         $this->wrapped = $wrapped ?: new Fpdi2Driver;
     }
 
-    public function merge(SourceInterface ...$sources): string
+    public function merge(string $documentTitle, SourceInterface ...$sources): string
     {
-        return $this->wrapped->merge(...$sources);
+        return $this->wrapped->merge($documentTitle, ...$sources);
     }
 }

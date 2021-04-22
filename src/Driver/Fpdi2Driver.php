@@ -31,7 +31,7 @@ final class Fpdi2Driver implements DriverInterface
         }
     }
 
-    public function merge(SourceInterface ...$sources): string
+    public function merge(string $documentTitle, SourceInterface ...$sources): string
     {
         $sourceName = '';
 
@@ -48,6 +48,7 @@ final class Fpdi2Driver implements DriverInterface
                     $size = $fpdi->getTemplateSize($template);
                     $fpdi->SetPrintHeader(false);
                     $fpdi->SetPrintFooter(false);
+                    $fpdi->SetTitle($documentTitle);
                     $fpdi->AddPage(
                         $size['width'] > $size['height'] ? 'L' : 'P',
                         [$size['width'], $size['height']]
